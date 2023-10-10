@@ -4,7 +4,7 @@ public class Closet {
     public String anywhere(String[] list) {
         ArrayList<String> words = new ArrayList<>();
         for(String s: list){
-            String[]element = s.split(" ");
+            String[] element = s.split(" ");
             words.addAll(Arrays.asList(element));
         }
 
