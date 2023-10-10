@@ -9,8 +9,7 @@ public class Closet {
         }
 
         Collections.sort(words);
-        HashSet<String> set = new LinkedHashSet<>();
-        set.addAll(words);
+        HashSet<String> set = new LinkedHashSet<>(words);
         
         return String.join(" ", set);
     }
