@@ -2,15 +2,13 @@ import java.util.*;
 
 public class Closet {
     public String anywhere(String[] list) {
-        ArrayList<String> words = new ArrayList<>();
-        for(String s: list){
-            String[] element = s.split(" ");
-            words.addAll(Arrays.asList(element));
+
+        TreeSet<String> ts = new TreeSet<>();
+
+        for(String str: list) {
+            ts.addAll(Arrays.asList(str.split(" ")));
         }
 
-        Collections.sort(words);
-        HashSet<String> set = new LinkedHashSet<>(words);
-        
-        return String.join(" ", set);
+        return String.join(" ", ts);
     }
-  }
+}
