@@ -14,11 +14,12 @@ public class BigWord {
 
         int most = Collections.max(map.values());
 
-        for(String word: map.keySet()){
-            if(map.get(word) == most) return word;
+        for(Map.Entry<String, Integer> entry: map.entrySet()){
+            if(entry.getValue() == most){
+                return entry.getKey();
+            }
         }
 
         return "";
-
     }
 }
