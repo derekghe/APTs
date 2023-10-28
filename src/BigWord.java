@@ -2,27 +2,23 @@ import java.util.*;
 
 public class BigWord {
     public String most(String[] sentences) {
-        int maxCount = 0;
-        String ret = "";
-        List <String> list = new ArrayList <>();
+        Map<String, Integer> map = new HashMap<>();
 
-        //adding all elements into one big list
-        for (String s: sentences){
-            String [] a = s.split(" ");
-            List <String> element = new ArrayList <>(Arrays.asList(a));
-            for (String word: element){
-                list.add(word.toLowerCase());
+        for(String str: sentences){
+            String[] words = str.split(" ");
+            for(String s: words){
+                String lower = s.toLowerCase();
+                map.put(lower, map.getOrDefault(lower, 0) + 1);
             }
         }
 
-        //finding the word that occurs the most
-        for (String b: list){
-            int occurrences = Collections.frequency(list, b);  //googled this method
-            if (occurrences > maxCount){
-                maxCount = occurrences;
-                ret = b;
-            }
+        int most = Collections.max(map.values());
+
+        for(String word: map.keySet()){
+            if(map.get(word) == most) return word;
         }
-        return ret;
+
+        return "";
+
     }
 }
