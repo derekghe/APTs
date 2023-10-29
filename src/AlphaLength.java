@@ -2,6 +2,7 @@ import java.util.*;
 
 public class AlphaLength {
     public ListNode create (String[] words) {
+        
         TreeSet<String> ts = new TreeSet<>(Arrays.asList(words));
         ArrayList<String> list = new ArrayList<>(ts);
 
