@@ -21,14 +21,17 @@ public class IsomorphicWords {
         HashMap<String, Integer> map = new HashMap<>();
 
         String[] array = str.split("");
-        int index = 0;
+        int value = 0;
         for(int i=0; i<array.length;i++){
-            if(!map.containsKey(array[i])){
-                map.put(array[i], index);
-                index++;
+            
+            String key = array[i];
+
+            if(!map.containsKey(key)){
+                map.put(key, value);
+                value++;
             }
 
-            ret += Integer.toString(map.get(array[i]));
+            ret += Integer.toString(map.get(key));
         }
         return ret;
     }
