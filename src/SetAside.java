@@ -2,7 +2,7 @@ import java.util.*;
 
 public class SetAside {
     public String common(String[] list) {
-        List<String> ret = new ArrayList<>();
+        TreeSet<String> ret = new TreeSet<>();
         HashMap<String, Integer> map = new HashMap<>();
 
         for(String words: list){
@@ -19,8 +19,6 @@ public class SetAside {
             }
         }
 
-        Collections.sort(ret);
-        HashSet<String> set = new LinkedHashSet<>(ret);
-        return String.join(" ", set);
+        return String.join(" ", ret);
     }
 }
