@@ -1,5 +1,5 @@
 public class ListDuplicateMe {
-public ListNode duplicate(ListNode list) {  
+    public ListNode duplicate(ListNode list) {  
         
         ListNode dummy = new ListNode(0);
         ListNode current = dummy;

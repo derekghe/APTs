@@ -2,7 +2,6 @@ public class ListMutation {
     public ListNode alter(ListNode list) {
         if(list == null) return null;
 
-
         list.next = alter(list.next);
 
         if(list.info % 2 == 1){
@@ -11,4 +10,5 @@ public class ListMutation {
             return new ListNode(list.info, list);
         }
     }
+
 }

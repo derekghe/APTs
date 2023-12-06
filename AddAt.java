@@ -5,10 +5,10 @@ public class AddAt {
         
         ListNode last = toAdd;
         while(last.next != null){
-            last = last.next;
+            last = last.next; //setting pointer to end of toAdd
         }
 
-        if(index == 0){
+        if(index == 0){ //special case when adding at head
             last.next = list;
             return toAdd;
         }
